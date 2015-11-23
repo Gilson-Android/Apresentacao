@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Apresentação Android</string>
+
+    <string name="action_settings">Configurações</string>
+    <string name="drawer_aberto">Drawer aberto</string>
+    <string name="drawer_fechad0">Drawer Fechado</string>
+    <string name="posicao_invalido">Posição inválido</string>
+
+    <string name="sub_sobrenos">SOBRE NÓS</string>
+    <string name="conteudo_sobrenos"> A syshouseapps é uma fábrica de software diferenciada em relação ao desenvolvimento de Aplicativos, Sistemas e Sites (Responsivos).\n\n
+        Unimos criatividade, design, prazos e orçamentos, o que garante a excelente qualidade de nossos produtos.\n
+        Possuímos uma equipe de profissionais com competência técnica qualificada e com experiência no desenvolvimento de projetos de tecnologia.\n\n
+        Com modelo de gestão inovador, implantamos uma cultura empreendedora permitindo total autonomia para experimentar novas soluções.</string>
+
+
+
+    <string name="sub_sites">SITES EM WORDPRESS</string>
+    <string name="sub_aplicativo">APLICATIVOS</string>
+    <string name="sub_fabrica">FÁBRICA DE SOFTWARE</string>
+
+    <string name="conteudo_sites">Seguindo uma tendência mundial na qual o acesso a sites via celular cresce a cada ano, criamos sites que proporcionam experiência de uso e dinamismo. O mesmo conteúdo pode ser visualizado em qualquer plataforma, desde seu computador pessoal, passando por tabletes até seu smartphone.</string>
+    <string name="conteudo_aplicativo">Desenvolvemos aplicativos personalizados nas plataformas Android, iOS e Windows Phone (smartphones, tabletes e Smart TVs) para o mercado empresarial e consumidor, atendendo as necessidades estratégicas e agregando os benefícios e funcionalidades que os aplicativos móveis oferecem.</string>
+    <string name="conteudo_fabrica">Desenvolvemos soluções de acordo com a necessidade de cada negócio. Visamos o equilíbrio perfeito entre as necessidades do Cliente, as tecnologias disponíveis e a evolução contínua dos processos. Aliamos inovação e criatividade com foco totalmente voltado para os resultados e proporcionando o crescimento do seu negócio.</string>
+
+</resources>
