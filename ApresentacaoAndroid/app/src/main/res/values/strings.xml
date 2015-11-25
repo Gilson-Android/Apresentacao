@@ -7,12 +7,11 @@
     <string name="posicao_invalido">Posição inválido</string>
 
     <string name="sub_sobrenos">SOBRE NÓS</string>
-    <string name="conteudo_sobrenos"> A syshouseapps é uma fábrica de software diferenciada em relação ao desenvolvimento de Aplicativos, Sistemas e Sites (Responsivos).\n\n
-        Unimos criatividade, design, prazos e orçamentos, o que garante a excelente qualidade de nossos produtos.\n
-        Possuímos uma equipe de profissionais com competência técnica qualificada e com experiência no desenvolvimento de projetos de tecnologia.\n\n
-        Com modelo de gestão inovador, implantamos uma cultura empreendedora permitindo total autonomia para experimentar novas soluções.</string>
-
-
+    <string name="conteudo_sobrenos">A syshouseapps é uma fábrica de software diferenciada em relação ao desenvolvimento de Aplicativos, Sistemas e Sites (Responsivos).\n\nUnimos criatividade, design, prazos e orçamentos, o que garante a excelente qualidade de nossos produtos.\nPossuímos uma equipe de profissionais com competência técnica qualificada e com experiência no desenvolvimento de projetos de tecnologia.\n\nCom modelo de gestão inovador, implantamos uma cultura empreendedora permitindo total autonomia para experimentar novas soluções.</string>
+    <string name="sub_sobrenos_2">O QUE NOS MOVE</string>
+    <string name="conteudo_sobrenos_2">Amor pela tecnologia, oferecendo soluções adequadas para cada necessidade, proporcionando satisfação e alegria à vida das pessoas.</string>
+    <string name="sub_sobrenos_3">VALORES</string>
+    <string name="conteudo_sobrenos_3">✓ Alegria \n✓ Comprometimento \n✓ Empreendedorismo \n✓ Ética \n✓ Proatividade \n✓ Praticidade</string>
 
     <string name="sub_sites">SITES EM WORDPRESS</string>
     <string name="sub_aplicativo">APLICATIVOS</string>

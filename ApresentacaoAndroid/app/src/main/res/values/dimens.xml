@@ -8,4 +8,5 @@
     <dimen name="custom_tab_layout_height">72dp</dimen>
     <dimen name="text_subtitulo">20dp</dimen>
     <dimen name="text_conteudo">15dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>
