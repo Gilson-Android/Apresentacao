@@ -1,17 +1,8 @@
 <resources>
-    <!-- Base application theme. -->
-   <!-- <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        &lt;!&ndash; Customize your theme here. &ndash;&gt;
-        <item name="windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
-        <item name="colorAccent">@color/colorAccent</item>
-    </style>-->
-
-    <style name="Theme.MeuTema" parent="Base.Theme.DesignDemo">
-    </style>
+    <style name="Theme.MeuTema" parent="Base.Theme.DesignDemo"></style>
 
     <style name="Base.Theme.DesignDemo" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">#673AB7</item>
+        <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryColor</item>
         <item name="colorAccent">@color/accentColor</item>
         <item name="android:windowBackground">@color/white</item>
@@ -24,5 +15,9 @@
         <item name="android:paddingBottom">24dp</item>
         <item name="android:orientation">vertical</item>
     </style>
+
+    <style name="Theme.MeuTema.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MeuTema.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 </resources>

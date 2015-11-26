@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/app/src/main/java/ggc/apresentaoandroid/adapters/NavigationDrawerListAdapter.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/ggc/apresentaoandroid/holder/DrawerHeaderHolder.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/ggc/apresentaoandroid/holder/DrawerRegularRowHolder.java" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/ggc/apresentaoandroid/holder/ic_comingsoon.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/ggc/apresentaoandroid/holder/ic_settings.png" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/ggc/apresentaoandroid/holder/ic_ticket.png" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/ggc/apresentaoandroid/utils/CircleTransform.java" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_done.png" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable-xxhdpi/ic_menu.png" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/drawer_row_header.xml" charset="windows-1252" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/drawer_row_normal.xml" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/menu" charset="windows-1252" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/menu/drawer_view.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/values-w820dp/themes.xml" charset="windows-1252" />

@@ -23,7 +23,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="@dimen/text_subtitulo"
-
+        android:padding="@dimen/text_subtitulo"
         android:textAlignment="center"
         android:text="@string/sub_aplicativo"
         />
