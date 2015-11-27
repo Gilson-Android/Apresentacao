@@ -9,6 +9,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
@@ -35,19 +36,24 @@ import java.util.List;
 public class PrincipalActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     NavigationView mNavigationView;
+    ActionBar mActionBar;
+    FragmentManager mFragmentManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fresco.initialize(this);
         setContentView(R.layout.activity_principal);
+        findViewById(R.id.conteudo).setVisibility(View.VISIBLE);
+        mFragmentManager = getSupportFragmentManager();
 
+        mFragmentManager.beginTransaction().replace(R.id.conteudo, new HomeFragments()).commit();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        final ActionBar ab = getSupportActionBar();
-        ab.setHomeAsUpIndicator(R.drawable.ic_menu);
-        ab.setDisplayHomeAsUpEnabled(true);
+        mActionBar = getSupportActionBar();
+        mActionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
+        mActionBar.setDisplayHomeAsUpEnabled(true);
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
@@ -60,25 +66,27 @@ public class PrincipalActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
 
-                if(item.isChecked()){
+                if (item.isChecked()) {
                     item.setChecked(false);
                 } else {
                     item.setChecked(true);
                 }
 
                 mDrawerLayout.closeDrawers();
+                switch (item.getItemId()) {
 
-                switch(item.getItemId()){
-                    case R.id.nav_home:
-                        Toast.makeText(getApplicationContext(), "Home", Toast.LENGTH_SHORT).show();
+                    case R.id.nav_home:  //0
+                        findViewById(R.id.conteudo).setVisibility(View.VISIBLE);
+                        mFragmentManager.beginTransaction().replace(R.id.conteudo, new HomeFragments()).commit();
                         return true;
-                    case R.id.nav_sobrenos:
-                        Toast.makeText(getApplicationContext(), "Sobreenos", Toast.LENGTH_SHORT).show();
+                    case R.id.nav_sobrenos: //1
+                        findViewById(R.id.conteudo).setVisibility(View.VISIBLE);
+                        mFragmentManager.beginTransaction().replace(R.id.conteudo, new SobreNosFragment()).commit();
                         return true;
-                    case R.id.nav_servicos:
+                    case R.id.nav_servicos: //2
                         Context context = mDrawerLayout.getContext();
                         Intent intent = new Intent(context, ServicosActivity.class);
-                        context.startActivity(intent);
+                        startActivityForResult(intent, 0);
                         return true;
                     case R.id.nav_contato:
                         Toast.makeText(getApplicationContext(), "Sites", Toast.LENGTH_SHORT).show();
@@ -95,6 +103,17 @@ public class PrincipalActivity extends AppCompatActivity {
                 Snackbar.make(view, "Colocar algo aqui", Snackbar.LENGTH_LONG).setAction("Action", null).show();
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        findViewById(R.id.conteudo).setVisibility(View.VISIBLE);
+        fragmentManager.beginTransaction().replace(R.id.conteudo, new HomeFragments()).commit();
+        mNavigationView.getMenu().getItem(0).setChecked(true);
+
     }
 
     private void setupDrawerContent(NavigationView navigationView) {

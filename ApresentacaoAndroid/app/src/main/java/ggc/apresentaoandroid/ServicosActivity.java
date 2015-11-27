@@ -32,11 +32,13 @@ public class ServicosActivity extends AppCompatActivity {
         ab.setDisplayHomeAsUpEnabled(true);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        viewPager.setVisibility(View.VISIBLE);
         if (viewPager != null) {
             setupViewPager(viewPager);
         }
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        tabLayout.setVisibility(View.VISIBLE);
         tabLayout.setupWithViewPager(viewPager);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);

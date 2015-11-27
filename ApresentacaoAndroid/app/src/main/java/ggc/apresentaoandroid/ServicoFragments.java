@@ -6,6 +6,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,6 +35,7 @@ public class ServicoFragments extends Fragment {
         super.onActivityCreated(savedInstanceState);
         //Inflate the layout for this fragment
         View view = getView();
+
         if(view != null) {
             viewPager = (ViewPager)  view.findViewById(R.id.viewpager);
             //viewPager = setupViewPager(viewPager);

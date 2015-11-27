@@ -6,8 +6,12 @@
     <string name="drawer_fechad0">Drawer Fechado</string>
     <string name="posicao_invalido">Posição inválido</string>
 
-    <string name="sub_home">Home</string>
+
+    <string name="conteudo_home">Necessidades específicas exigem o desenvolvimento de um Software personalizado.\n\nA syshouseapps por meio de sua Fábrica de Software desenvolve soluções capazes de atender às necessidades específicas da sua empresa,\n\nqualquer que seja o seu segmento de negócio.\n\nA combinação perfeita entre tecnologia e as melhores práticas de desenvolvimento permitem à syshouseapps oferecer soluções de alta qualidade.\n\nEntre em contato com a syshouseapps e conheça mais sobre nossos serviços!</string>
+
+    <string name="sub_home">HOME</string>
     <string name="sub_sobrenos">SOBRE NÓS</string>
+    <string name="sub_servicos">SERVIÇOS</string>
     <string name="conteudo_sobrenos">A syshouseapps é uma fábrica de software diferenciada em relação ao desenvolvimento de Aplicativos, Sistemas e Sites (Responsivos).\n\nUnimos criatividade, design, prazos e orçamentos, o que garante a excelente qualidade de nossos produtos.\nPossuímos uma equipe de profissionais com competência técnica qualificada e com experiência no desenvolvimento de projetos de tecnologia.\n\nCom modelo de gestão inovador, implantamos uma cultura empreendedora permitindo total autonomia para experimentar novas soluções.</string>
     <string name="sub_sobrenos_2">O QUE NOS MOVE</string>
     <string name="conteudo_sobrenos_2">Amor pela tecnologia, oferecendo soluções adequadas para cada necessidade, proporcionando satisfação e alegria à vida das pessoas.</string>
@@ -17,6 +21,8 @@
     <string name="sub_sites">SITES EM WORDPRESS</string>
     <string name="sub_aplicativo">APLICATIVOS</string>
     <string name="sub_fabrica">FÁBRICA DE SOFTWARE</string>
+
+    <string name="sub_contato">CONTATO</string>
 
     <string name="conteudo_sites">Seguindo uma tendência mundial na qual o acesso a sites via celular cresce a cada ano, criamos sites que proporcionam experiência de uso e dinamismo. O mesmo conteúdo pode ser visualizado em qualquer plataforma, desde seu computador pessoal, passando por tabletes até seu smartphone.</string>
     <string name="conteudo_aplicativo">Desenvolvemos aplicativos personalizados nas plataformas Android, iOS e Windows Phone (smartphones, tabletes e Smart TVs) para o mercado empresarial e consumidor, atendendo as necessidades estratégicas e agregando os benefícios e funcionalidades que os aplicativos móveis oferecem.</string>
