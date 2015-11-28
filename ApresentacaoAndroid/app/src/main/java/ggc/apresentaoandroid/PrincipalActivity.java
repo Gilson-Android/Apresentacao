@@ -34,28 +34,42 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PrincipalActivity extends AppCompatActivity {
-    private DrawerLayout mDrawerLayout;
-    NavigationView mNavigationView;
-    ActionBar mActionBar;
-    FragmentManager mFragmentManager;
+    private DrawerLayout        mDrawerLayout;
+    private NavigationView      mNavigationView;
+    private ActionBar           mActionBar;
+    private FragmentManager     mFragmentManager;
+    private Toolbar             mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Fresco.initialize(this);
         setContentView(R.layout.activity_principal);
-        findViewById(R.id.conteudo).setVisibility(View.VISIBLE);
-        mFragmentManager = getSupportFragmentManager();
 
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        findViewById(R.id.conteudo).setVisibility(View.VISIBLE);
+
+        mFragmentManager = getSupportFragmentManager();
         mFragmentManager.beginTransaction().replace(R.id.conteudo, new HomeFragments()).commit();
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+
+        carregarNavegacao();
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Colocar algo aqui", Snackbar.LENGTH_LONG).setAction("Action", null).show();
+            }
+        });
+    }
+
+    private void carregarNavegacao(){
+        setSupportActionBar(mToolbar);
 
         mActionBar = getSupportActionBar();
         mActionBar.setHomeAsUpIndicator(R.drawable.ic_menu);
         mActionBar.setDisplayHomeAsUpEnabled(true);
-
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
         mNavigationView = (NavigationView) findViewById(R.id.nav_view);
         if (mNavigationView != null) {
@@ -93,14 +107,6 @@ public class PrincipalActivity extends AppCompatActivity {
                         return true;
                 }
                 return false;
-            }
-        });
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Colocar algo aqui", Snackbar.LENGTH_LONG).setAction("Action", null).show();
             }
         });
     }

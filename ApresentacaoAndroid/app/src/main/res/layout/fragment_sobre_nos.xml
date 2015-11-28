@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -16,9 +15,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:contentScrim="@color/primaryColor"
-            app:expandedTitleMarginEnd="64dp"
-            app:expandedTitleMarginStart="48dp"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:expandedTitleMarginEnd="30dp"
+            app:statusBarScrim="@color/primaryColor"
+            app:expandedTitleMarginStart="20dp"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|enterAlwaysCollapsed">
 
             <com.facebook.drawee.view.SimpleDraweeView
                 android:id="@+id/iv_sobre"
@@ -31,7 +32,6 @@
                 app:placeholderImage="@drawable/loading_img"
                 app:retryImage="@drawable/retry_img" />
 
-
             <android.support.v7.widget.Toolbar
                 android:id="@+id/tb_main"
                 android:layout_width="match_parent"
@@ -41,13 +41,7 @@
                 app:layout_collapseMode="pin"
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
 
-                <android.support.v7.widget.AppCompatTextView
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/sub_sobrenos"
-                    android:textSize="@dimen/text_subtitulo" />
             </android.support.v7.widget.Toolbar>
-
 
         </android.support.design.widget.CollapsingToolbarLayout>
     </android.support.design.widget.AppBarLayout>
@@ -55,18 +49,18 @@
     <android.support.v4.widget.NestedScrollView
         android:id="@+id/NestedScrollView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="fill_parent"
         android:fillViewport="true"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-
         android:paddingTop="0dp"
+        android:layout_marginBottom="30dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <RelativeLayout
             android:id="@+id/rl_segundario"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:layout_alignParentLeft="true"
             android:orientation="vertical"
             android:paddingBottom="@dimen/activity_vertical_margin"
@@ -113,9 +107,17 @@
                 android:id="@+id/conteudo_sobrenos_3"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
                 android:layout_below="@+id/sub_sobrenos_3"
                 android:text="@string/conteudo_sobrenos_3"
                 android:textSize="@dimen/text_conteudo" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_below="@+id/conteudo_sobrenos_3">
+
+            </LinearLayout>
 
         </RelativeLayout>
     </android.support.v4.widget.NestedScrollView>

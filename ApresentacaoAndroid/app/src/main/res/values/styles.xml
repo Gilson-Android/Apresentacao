@@ -20,4 +20,9 @@
 
     <style name="Theme.MeuTema.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="Theme.MeuTema.NoTitleBar" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
 </resources>

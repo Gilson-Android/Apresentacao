@@ -3,6 +3,7 @@ package ggc.apresentaoandroid;
 
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.view.LayoutInflater;
@@ -32,6 +33,9 @@ public class SobreNosFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+
+        CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) view.findViewById(R.id.collapsing_toolbar);
+        collapsingToolbarLayout.setTitle(getString(R.string.sub_sobrenos));
 
         SimpleDraweeView ivShot = (SimpleDraweeView)view.findViewById(R.id.iv_sobre);
 

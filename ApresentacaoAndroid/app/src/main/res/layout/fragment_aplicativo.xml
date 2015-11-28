@@ -1,38 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".PrincipalActivity"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:orientation="vertical">
+    tools:context=".PrincipalActivity">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_gravity="center"
-        android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        android:maxWidth="100dp"
-        android:maxHeight="100dp"
-        android:src="@drawable/ic_aplicativos" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <android.support.v7.widget.AppCompatTextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:textSize="@dimen/text_subtitulo"
-        android:padding="@dimen/text_subtitulo"
-        android:textAlignment="center"
-        android:text="@string/sub_aplicativo"
-        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <android.support.v7.widget.AppCompatTextView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:textSize="@dimen/text_conteudo"
-        android:textAlignment="center"
-        android:text="@string/conteudo_aplicativo"
-        />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="4dp"
+                android:maxHeight="100dp"
+                android:maxWidth="100dp"
+                android:src="@drawable/ic_aplicativos" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/text_subtitulo"
+                android:text="@string/sub_aplicativo"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_subtitulo" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:text="@string/conteudo_aplicativo"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_conteudo" />
+        </LinearLayout>
+    </ScrollView>
+
+
 </LinearLayout>

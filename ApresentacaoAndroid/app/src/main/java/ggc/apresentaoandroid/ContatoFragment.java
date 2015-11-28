@@ -10,16 +10,13 @@ import android.view.ViewGroup;
 public class ContatoFragment extends Fragment {
 
     public static ContatoFragment newInstance() {
-
         ContatoFragment fragment = new ContatoFragment();
 
         return fragment;
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_contato, container, false);
     }
 

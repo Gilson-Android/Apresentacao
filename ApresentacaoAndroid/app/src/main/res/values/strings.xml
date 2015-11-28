@@ -28,5 +28,6 @@
     <string name="conteudo_aplicativo">Desenvolvemos aplicativos personalizados nas plataformas Android, iOS e Windows Phone (smartphones, tabletes e Smart TVs) para o mercado empresarial e consumidor, atendendo as necessidades estratégicas e agregando os benefícios e funcionalidades que os aplicativos móveis oferecem.</string>
     <string name="conteudo_fabrica">Desenvolvemos soluções de acordo com a necessidade de cada negócio. Visamos o equilíbrio perfeito entre as necessidades do Cliente, as tecnologias disponíveis e a evolução contínua dos processos. Aliamos inovação e criatividade com foco totalmente voltado para os resultados e proporcionando o crescimento do seu negócio.</string>
     <string name="title_activity_servicos">SERVIÇOS</string>
+    <string name="sub_titulo_splash">NOSSOS CLIENTES</string>
 
 </resources>
