@@ -2,6 +2,7 @@ package ggc.apresentaoandroid;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.graphics.drawable.Drawable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
@@ -23,7 +24,9 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,16 +36,22 @@ import com.facebook.drawee.backends.pipeline.Fresco;
 import java.util.ArrayList;
 import java.util.List;
 
+import ggc.apresentaoandroid.Util.Utilidades;
+import ggc.apresentaoandroid.Util.VerificarInternet;
+
 public class PrincipalActivity extends AppCompatActivity {
     private DrawerLayout        mDrawerLayout;
     private NavigationView      mNavigationView;
     private ActionBar           mActionBar;
     private FragmentManager     mFragmentManager;
-    private Toolbar             mToolbar;
+    private static Toolbar      mToolbar;
+    private VerificarInternet   internetStatus = new VerificarInternet();
+    private static TextView     header;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Constantes.setActivity(this);
         Fresco.initialize(this);
         setContentView(R.layout.activity_principal);
 
@@ -64,6 +73,31 @@ public class PrincipalActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        statusConexao(this);
+        registerReceiver(internetStatus, new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"));
+    }
+
+    @Override
+    protected void onPause() {
+        unregisterReceiver(internetStatus);
+        super.onPause();
+    }
+
+
+    public static boolean statusConexao(Context _context) {
+        if (!Utilidades.Conectado(Constantes.getActivity())) {
+            mToolbar.setTitle(_context.getString(R.string.cabecalho_sem_conexao));
+            mToolbar.setTitleTextColor(_context.getResources().getColor(R.color.accentColor));
+            return false;
+        } else {
+            mToolbar.setTitle(_context.getString(R.string.app_name));
+            mToolbar.setTitleTextColor(_context.getResources().getColor(R.color.white));
+            return true;
+        }
+    }
     private void carregarNavegacao(){
         setSupportActionBar(mToolbar);
 
@@ -114,7 +148,7 @@ public class PrincipalActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-
+        Constantes.setActivity(this);
         FragmentManager fragmentManager = getSupportFragmentManager();
         findViewById(R.id.conteudo).setVisibility(View.VISIBLE);
         fragmentManager.beginTransaction().replace(R.id.conteudo, new HomeFragments()).commit();

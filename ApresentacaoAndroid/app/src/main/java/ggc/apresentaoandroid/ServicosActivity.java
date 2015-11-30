@@ -1,5 +1,7 @@
 package ggc.apresentaoandroid;
 
+import android.content.Context;
+import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,18 +16,28 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import ggc.apresentaoandroid.Util.Utilidades;
+import ggc.apresentaoandroid.Util.VerificarInternet;
+
 public class ServicosActivity extends AppCompatActivity {
+
+    private VerificarInternet   internetStatus = new VerificarInternet();
+    private static Toolbar      mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_servicos);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        Constantes.setActivity(this);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
 
 
         final ActionBar ab = getSupportActionBar();
@@ -49,6 +61,32 @@ public class ServicosActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        statusConexao(this);
+        registerReceiver(internetStatus, new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE"));
+    }
+
+    @Override
+    protected void onPause() {
+        unregisterReceiver(internetStatus);
+        super.onPause();
+    }
+
+    public static boolean statusConexao(Context _context) {
+
+        if (!Utilidades.Conectado(Constantes.getActivity())) {
+            mToolbar.setTitle(_context.getString(R.string.cabecalho_sem_conexao));
+            mToolbar.setTitleTextColor(_context.getResources().getColor(R.color.accentColor));
+            return false;
+        } else {
+            mToolbar.setTitle(_context.getString(R.string.app_name));
+            mToolbar.setTitleTextColor(_context.getResources().getColor(R.color.white));
+            return true;
+        }
     }
 
     @Override
